@@ -1,0 +1,21 @@
+Paxos is a protocol that allows a set of nodes to agree on a \textbf{single
+value}, despite the possibility of faults.
+
+\vspace{1in}
+
+{\input{figures/paxos_background_diagram.tex}}
+
+\vspace{1in}
+
+MultiPaxos is a protocol that allows a set of nodes to agree on a
+\textbf{sequence of values}, despite the possibility of faults.
+
+\vspace{1in}
+
+{\input{figures/multipaxos_background_diagram.tex}}
+
+\vspace{1in}
+
+Every state machine command goes through the leader, and the leader processes
+disproportionately more messages than the acceptors. Thus, MultiPaxos'
+\textbf{throughput is bottlenecked by the leader}.

@@ -1,0 +1,15 @@
+Do read operations have to go through the leader? No!
+\begin{enumerate}
+  \item
+    \textbf{Client}: contact at least a majority of the acceptors.
+  \item
+    \textbf{Acceptor}: return the largest log entry with a vote.
+  \item
+    \textbf{Client}: compute $i$, the maximum log entry from at least a majority.
+  \item
+    \textbf{Client}: read from a replica at position $i+1$ or larger.
+\end{enumerate}
+
+{\input{figures/linearizable_quorum_reads_diagram.tex}}
+
+When applied to Compartmentalized MultiPaxos, we get \textbf{scalable reads}.

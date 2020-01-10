@@ -1,0 +1,40 @@
+\documentclass[a0paper, landscape]{tikzposter}
+
+\title{Making State Machine Replication Simpler and More Scalable}
+\author{%
+  Neil Giridharan, %
+  Joseph M. Hellerstein, %
+  Heidi Howard, %
+  Faisal Nawab, %
+  Ion Stoica, %
+  Adriana Szekeres, %
+  \textbf{Michael Whittaker}%
+}
+
+% \usepackage[noend]{algpseudocode}
+% \usepackage{algorithm}
+% \usepackage{booktabs}
+% \usepackage{colortbl}
+% \usepackage{mathpartir}
+% \usepackage{multicol}
+\usepackage{pervasives}
+\usepackage{riseposter}
+\usepackage{diagrams}
+\usepackage{tikz}
+% \usetikzlibrary{snakes}
+
+\begin{document}
+\maketitle
+
+\begin{columns}
+\column{0.33333}
+\block{Paxos and MultiPaxos}{\input{sections/paxos_multipaxos.tex}}
+
+\column{0.33333}
+\block{Compartmentalization}{\input{sections/compartmentalization.tex}}
+
+\column{0.33333}
+\block{Linearizable Quorum Reads}{\input{sections/linearizable_quorum_reads.tex}}
+\block{Matchmaking}{\input{sections/matchmaking.tex}}
+\end{columns}
+\end{document}
